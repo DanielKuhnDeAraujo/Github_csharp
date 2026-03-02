@@ -90,7 +90,8 @@ namespace Github_csharp
                 b = decimal.Parse(txtBox2.Text);
                 lbl_res.Text = (a / b).ToString();
             }
-            catch  (FormatException){
+            catch (FormatException)
+            {
                 MessageBox.Show("Informe apenas números");
             }
             catch (DivideByZeroException)
@@ -118,7 +119,7 @@ namespace Github_csharp
                     if (a < b)
                     {
                         lbl_alg.Text = "<";
-                        lbl_res.Text= $"{a} é o maior";
+                        lbl_res.Text = $"{a} é o maior";
                     }
                     else
                     {
@@ -137,4 +138,5 @@ namespace Github_csharp
                 MessageBox.Show("Informe apenas números");
             }
         }
+    }
 }
