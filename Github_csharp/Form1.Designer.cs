@@ -65,6 +65,7 @@
             this.btn_fechar.TabIndex = 1;
             this.btn_fechar.Text = "&Fechar";
             this.btn_fechar.UseVisualStyleBackColor = true;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // btn_limpar
             // 
@@ -125,6 +126,7 @@
             this.btn_sub.TabIndex = 4;
             this.btn_sub.Text = "Sub&trair";
             this.btn_sub.UseVisualStyleBackColor = true;
+            this.btn_sub.Click += new System.EventHandler(this.btn_sub_Click);
             // 
             // button1
             // 
@@ -134,6 +136,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "&Multiplicação";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -143,6 +146,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "&Dividir";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button3
             // 
@@ -152,6 +156,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "&Comparar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
