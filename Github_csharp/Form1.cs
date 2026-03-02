@@ -24,7 +24,14 @@ namespace Github_csharp
 
         private void button2_Click(object sender, EventArgs e)
         {
+            double a = double.Parse(txtBox1.Text);
+            double b = double.Parse(txtBox2.Text);
+            lbl_res.Text = (a + b).ToString();
+        }
 
+        private void btn_limpar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
