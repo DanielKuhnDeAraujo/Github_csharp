@@ -7,8 +7,10 @@ Essa é uma calculadora básica com algumas funções a mais. Para utilizá-la, 
 Limpa os números das textbox, o algarismo e o resultado.  
 ### Comparar (Shift + C)  
 Compara os números e devolve como resultado qual é maior da seguinte forma :   
-| X é o maior |  
-| --- | --- |
+| Syntax | Description |
+| --- | ----------- |
+| Header | Title |
+| Paragraph | Text |   
 (sendo X o número)  
 ### Par Ímpar (Shift + P) 
 Devolve como resultado se cada número é par ou ímpar da seguinte forma :  
