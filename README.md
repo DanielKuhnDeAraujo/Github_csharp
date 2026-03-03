@@ -22,7 +22,7 @@ Versão Atual : 1.2
 ## Introdução   
 Essa é uma calculadora básica com algumas funções a mais. Para utilizá-la, digite os números na textbox e aperte em algum botão para fazer sua respectiva função.
 ## Layout 
-![Layout](\img\layout.png)
+![Layout](img/layout.png)
 ## Funções  
 ### Limpar (Shift + L)  
 Limpa os números das textbox, o algarismo e o resultado.  
