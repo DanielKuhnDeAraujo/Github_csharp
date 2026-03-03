@@ -1,8 +1,8 @@
 # Calculadora  
 Versão Atual : 1.2
 ## Índice 
-- [Layout](#Layout)
 - [Introdução](#Introdução)
+- [Layout](#Layout)
 - [Funções](#Funções) 
   - [Limpar](#Limpar-(Shift-+-L)) 
   - [Comparar](#Comparar-(Shift-+-C))
