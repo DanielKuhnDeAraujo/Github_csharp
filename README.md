@@ -4,8 +4,20 @@ Versão Atual : 1.2
 - [Introdução](#Introdução)
 - [Funções](#Funções) 
   - [Limpar](#Limpar-(Shift-+-L)) 
-  - [Comparar](#Comparar-(Shift-+-C)) 
-- [Tratamento de erros](#Tratamento-de-Erros) 
+  - [Comparar](#Comparar-(Shift-+-C))
+  - [Par Ímpar (Shift + P)](#Par-Ímpar-(Shift-+-P))
+  - [Fechar (Shift + F)](#Fechar-(Shift-+-F))
+  - [Funções básicas de calculadora](#Funções-básicas-de-calculadora)
+    - [Somar (Shift + S)](#Somar-(Shift-+-S))
+    - [Subtrair (Shift + T)](#Subtrair-(Shift-+-T))
+    - [Multiplicar (Shift + M)](#Multiplicar-(Shift-+-M))
+    - [Dividir (Shift + D)](#Dividir-(Shift-+-D))
+- [Tratamento de Erros](#Tratamento-de-Erros)
+  - [Letras em vez de Números](#Letras-em-vez-de-Números)
+  - [Divisão por zero](#Divisão-por-zero)
+- [Versões](#Versões)
+  - [1.2](#12)
+  - [1.1](#11)
 ## Introdução   
 Essa é uma calculadora básica com algumas funções a mais. Para utilizá-la, digite os números na textbox e aperte em algum botão para fazer sua respectiva função. 
 ## Funções  
