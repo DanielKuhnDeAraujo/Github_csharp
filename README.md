@@ -1,5 +1,7 @@
 # Calculadora  
 Versão Atual : 1.2
+## Índice 
+- [Introdução](##Introdução)
 ## Introdução   
 Essa é uma calculadora básica com algumas funções a mais. Para utilizá-la, digite os números na textbox e aperte em algum botão para fazer sua respectiva função. 
 ## Funções  
