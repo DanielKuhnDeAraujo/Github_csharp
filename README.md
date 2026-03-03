@@ -1,6 +1,7 @@
 # Calculadora  
 Versão Atual : 1.2
 ## Índice 
+- [Layout](#Layout)
 - [Introdução](#Introdução)
 - [Funções](#Funções) 
   - [Limpar](#Limpar-(Shift-+-L)) 
@@ -19,7 +20,8 @@ Versão Atual : 1.2
   - [1.2](#12)
   - [1.1](#11)
 ## Introdução   
-Essa é uma calculadora básica com algumas funções a mais. Para utilizá-la, digite os números na textbox e aperte em algum botão para fazer sua respectiva função. 
+Essa é uma calculadora básica com algumas funções a mais. Para utilizá-la, digite os números na textbox e aperte em algum botão para fazer sua respectiva função.
+## Layout 
 ## Funções  
 ### Limpar (Shift + L)  
 Limpa os números das textbox, o algarismo e o resultado.  
