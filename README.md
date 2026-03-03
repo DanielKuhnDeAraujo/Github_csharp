@@ -38,8 +38,14 @@ Multiplica os números e define o algarismo como : *
 | Resultado de Exemplo |  
 | --- |   
 | 40 |  
-#### Multiplicar (Shift + M )  
-Multiplica os números e define o algarismo como : /  
+#### Dividir (Shift + D )  
+Divide os números e define o algarismo como : /  
 | Resultado de Exemplo |  
 | --- |   
 | 2,5 |  
+## Tratamento de Erros   
+Atualmente dois tipos de erros são tratados :  
+### Letras em vez de Números 
+Aparece uma janelinha escrita : Informe apenas números  
+### Divisão por zero  
+Caso você tente dividir um número por 0 aparece uma janela escrito : Impossível divisão por zero
