@@ -54,5 +54,5 @@ Aparece uma janelinha escrita : Informe apenas números
 ### Divisão por zero  
 Caso você tente dividir um número por 0 aparece uma janela escrito : Impossível divisão por zero
 ## Versões : 
-1.2 : Calculadora com todas as funções básicas, além de comparar e ver se é par
-1.1 : Calculadora básica, só com soma, fechar e limpar
+1.2 : Calculadora com todas as funções básicas, além de comparar e ver se é par.  
+1.1 : Calculadora básica, só com soma, fechar e limpar.  
