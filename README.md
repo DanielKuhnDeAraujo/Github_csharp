@@ -11,10 +11,35 @@ Compara os números e devolve como resultado qual é maior da seguinte forma :
 | --- |   
   
 (sendo X o número)  
+Também define o algarismo como "<" ou ">" dependendo de qual é maior  
 ### Par Ímpar (Shift + P) 
 Devolve como resultado se cada número é par ou ímpar da seguinte forma :  
 | N1 : par <br> N2 : impar|  
 | --- | 
-
-  
+    
 (n(x) sendo cada número e par ou ímpar sendo o correspondente ao número)  
+### Fechar (Shift + F)  
+Fecha o aplicativo  
+### Funções básicas de calculadora  
+As funções abaixo são as operações básicas. Para os exemplos suponha que os valores são 10 e 4.  
+#### Somar (Shift + S )  
+Soma os números e define o algarismo como : +  
+| Resultado do exemplo |  
+| --- |   
+| 14 |  
+
+#### Subtrair (Shift + T )  
+Sutrai os números e define o algarismo como : -  
+| Resultado do exemplo |  
+| --- |   
+| 6 |  
+#### Multiplicar (Shift + M )  
+Multiplica os números e define o algarismo como : *  
+| Resultado de Exemplo |  
+| --- |   
+| 40 |  
+#### Multiplicar (Shift + M )  
+Multiplica os números e define o algarismo como : /  
+| Resultado de Exemplo |  
+| --- |   
+| 2,5 |  
