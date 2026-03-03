@@ -3,6 +3,8 @@ Versão Atual : 1.2
 ## Índice 
 - [Introdução](#Introdução)
 - [Funções](#Funções)
+  -[Limpar](#Limpar-(Shift-+-L))
+  -[Comparar](#Comparar-(Shift-+-C))
 - [Tratamento de erros](#Tratamento-de-Erros)
 ## Introdução   
 Essa é uma calculadora básica com algumas funções a mais. Para utilizá-la, digite os números na textbox e aperte em algum botão para fazer sua respectiva função. 
