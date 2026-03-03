@@ -15,7 +15,6 @@ Compara os números e devolve como resultado qual é maior da seguinte forma :
 Devolve como resultado se cada número é par ou ímpar da seguinte forma :  
 |  |
 | --- | 
-| N1 : par  
- N2 : impar|  
+| N1 : par \ N2 : impar|  
   
 (n(x) sendo cada número e par ou ímpar sendo o correspondente ao número)  
