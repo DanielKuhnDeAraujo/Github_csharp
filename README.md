@@ -13,8 +13,8 @@ Compara os números e devolve como resultado qual é maior da seguinte forma :
 (sendo X o número)  
 ### Par Ímpar (Shift + P) 
 Devolve como resultado se cada número é par ou ímpar da seguinte forma :  
-|  |
-| --- | 
 | N1 : par <br> N2 : impar|  
+| --- | 
+
   
 (n(x) sendo cada número e par ou ímpar sendo o correspondente ao número)  
