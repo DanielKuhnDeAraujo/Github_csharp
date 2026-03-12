@@ -44,7 +44,9 @@ namespace Github_csharp.Formulários
 
         private void comBotõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form1 form = new Form1();
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -55,6 +57,34 @@ namespace Github_csharp.Formulários
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        private void MDI_Menu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja realmente sair?", "Saindo...", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.No)
+            {
+                e.Cancel = true;   
+            }
+            else
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            stahora.Text = DateTime.Now.ToString();
         }
     }
 }
