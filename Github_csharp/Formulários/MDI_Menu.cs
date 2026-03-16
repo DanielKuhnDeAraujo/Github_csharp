@@ -34,9 +34,29 @@ namespace Github_csharp.Formulários
 
         private void comRadioButtonsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            OpenChildForm<CalcRadio>();
 
         }
+        private void OpenChildForm<T>() where T : Form, new()
+        {
+                var existingForm = this.MdiChildren.FirstOrDefault(f => f is T);
 
+                if (existingForm != null)
+                {
+                    // Se já existe, traz para frente e ativa
+                    existingForm.BringToFront();
+                    existingForm.Activate();
+                }
+                else
+                {
+                    // Se não existe, cria e exibe
+                    var newForm = new T
+                    {
+                        MdiParent = this,
+                    };
+                    newForm.Show();
+                }
+        }
         private void janelasToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -44,9 +64,7 @@ namespace Github_csharp.Formulários
 
         private void comBotõesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
-            form.MdiParent = this;
-            form.Show();
+            OpenChildForm<Form1>(); // ChildForm é o tipo do formulário filho
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

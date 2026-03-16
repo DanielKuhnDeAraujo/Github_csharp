@@ -46,7 +46,7 @@
             this.desenvolvedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripbtnCalcBotoes = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.blocoDeNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculadoraWindowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,8 +63,8 @@
             this.ajudaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.stahora = new System.Windows.Forms.ToolStripStatusLabel();
             this.staMensagem = new System.Windows.Forms.ToolStripStatusLabel();
+            this.stahora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -81,7 +81,7 @@
             this.ajudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 36);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,7 +191,7 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton2,
-            this.toolStripButton1,
+            this.toolStripbtnCalcBotoes,
             this.toolStripDropDownButton1,
             this.novoToolStripButton,
             this.abrirToolStripButton,
@@ -203,9 +203,9 @@
             this.colarToolStripButton,
             this.toolStripSeparator1,
             this.ajudaToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 36);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 33);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 38);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -218,16 +218,16 @@
             this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
-            // toolStripButton1
+            // toolStripbtnCalcBotoes
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.ToolTipText = "Calculadora com botões";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripbtnCalcBotoes.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripbtnCalcBotoes.Image = ((System.Drawing.Image)(resources.GetObject("toolStripbtnCalcBotoes.Image")));
+            this.toolStripbtnCalcBotoes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripbtnCalcBotoes.Name = "toolStripbtnCalcBotoes";
+            this.toolStripbtnCalcBotoes.Size = new System.Drawing.Size(34, 33);
+            this.toolStripbtnCalcBotoes.Text = "toolStripButton1";
+            this.toolStripbtnCalcBotoes.ToolTipText = "Calculadora com botões";
+            this.toolStripbtnCalcBotoes.Click += new System.EventHandler(this.comBotõesToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton1
             // 
@@ -363,18 +363,18 @@
             this.toolStripStatusLabel1.Text = "Usuário : Daniel";
             this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
-            // stahora
-            // 
-            this.stahora.Name = "stahora";
-            this.stahora.Size = new System.Drawing.Size(121, 25);
-            this.stahora.Text = "Data e Hora : ";
-            // 
             // staMensagem
             // 
             this.staMensagem.Name = "staMensagem";
             this.staMensagem.Size = new System.Drawing.Size(100, 25);
             this.staMensagem.Text = "Mensagem";
             this.staMensagem.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
+            // 
+            // stahora
+            // 
+            this.stahora.Name = "stahora";
+            this.stahora.Size = new System.Drawing.Size(121, 25);
+            this.stahora.Text = "Data e Hora : ";
             // 
             // timer1
             // 
@@ -424,7 +424,7 @@
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem desenvolvedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripbtnCalcBotoes;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem blocoDeNotasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculadoraWindowsToolStripMenuItem;
