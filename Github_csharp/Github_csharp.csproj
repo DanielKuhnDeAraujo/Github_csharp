@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formulários\CalcDeVdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\CalcDeVdd.Designer.cs">
+      <DependentUpon>CalcDeVdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formulários\CalcRadio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\CalcDeVdd.resx">
+      <DependentUpon>CalcDeVdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulários\CalcRadio.resx">
       <DependentUpon>CalcRadio.cs</DependentUpon>
     </EmbeddedResource>

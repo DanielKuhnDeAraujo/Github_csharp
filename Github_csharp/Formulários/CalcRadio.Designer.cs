@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.RadBSomar = new System.Windows.Forms.RadioButton();
-            this.RadBDividir = new System.Windows.Forms.RadioButton();
-            this.RadBMultiplicar = new System.Windows.Forms.RadioButton();
             this.RadBSubtrair = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblarg = new System.Windows.Forms.Label();
+            this.RadBMultiplicar = new System.Windows.Forms.RadioButton();
+            this.RadBDividir = new System.Windows.Forms.RadioButton();
+            this.RadBSomar = new System.Windows.Forms.RadioButton();
+            this.txtBox1 = new System.Windows.Forms.TextBox();
+            this.txtBox2 = new System.Windows.Forms.TextBox();
+            this.lbl_alg = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblres = new System.Windows.Forms.Label();
+            this.lbl_res = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,39 +56,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operações";
-            // 
-            // RadBSomar
-            // 
-            this.RadBSomar.AutoSize = true;
-            this.RadBSomar.Location = new System.Drawing.Point(34, 46);
-            this.RadBSomar.Name = "RadBSomar";
-            this.RadBSomar.Size = new System.Drawing.Size(81, 24);
-            this.RadBSomar.TabIndex = 0;
-            this.RadBSomar.TabStop = true;
-            this.RadBSomar.Text = "Somar";
-            this.RadBSomar.UseVisualStyleBackColor = true;
-            // 
-            // RadBDividir
-            // 
-            this.RadBDividir.AutoSize = true;
-            this.RadBDividir.Location = new System.Drawing.Point(34, 136);
-            this.RadBDividir.Name = "RadBDividir";
-            this.RadBDividir.Size = new System.Drawing.Size(76, 24);
-            this.RadBDividir.TabIndex = 1;
-            this.RadBDividir.TabStop = true;
-            this.RadBDividir.Text = "Dividir";
-            this.RadBDividir.UseVisualStyleBackColor = true;
-            // 
-            // RadBMultiplicar
-            // 
-            this.RadBMultiplicar.AutoSize = true;
-            this.RadBMultiplicar.Location = new System.Drawing.Point(34, 106);
-            this.RadBMultiplicar.Name = "RadBMultiplicar";
-            this.RadBMultiplicar.Size = new System.Drawing.Size(104, 24);
-            this.RadBMultiplicar.TabIndex = 2;
-            this.RadBMultiplicar.TabStop = true;
-            this.RadBMultiplicar.Text = "Multiplicar";
-            this.RadBMultiplicar.UseVisualStyleBackColor = true;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // RadBSubtrair
             // 
@@ -100,30 +68,67 @@
             this.RadBSubtrair.TabStop = true;
             this.RadBSubtrair.Text = "Subtrair";
             this.RadBSubtrair.UseVisualStyleBackColor = true;
+            this.RadBSubtrair.CheckedChanged += new System.EventHandler(this.RadBSubtrair_CheckedChanged);
             // 
-            // textBox1
+            // RadBMultiplicar
             // 
-            this.textBox1.Location = new System.Drawing.Point(354, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 26);
-            this.textBox1.TabIndex = 1;
+            this.RadBMultiplicar.AutoSize = true;
+            this.RadBMultiplicar.Location = new System.Drawing.Point(34, 106);
+            this.RadBMultiplicar.Name = "RadBMultiplicar";
+            this.RadBMultiplicar.Size = new System.Drawing.Size(104, 24);
+            this.RadBMultiplicar.TabIndex = 2;
+            this.RadBMultiplicar.TabStop = true;
+            this.RadBMultiplicar.Text = "Multiplicar";
+            this.RadBMultiplicar.UseVisualStyleBackColor = true;
+            this.RadBMultiplicar.CheckedChanged += new System.EventHandler(this.RadBMultiplicar_CheckedChanged);
             // 
-            // textBox2
+            // RadBDividir
             // 
-            this.textBox2.Location = new System.Drawing.Point(354, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 26);
-            this.textBox2.TabIndex = 2;
+            this.RadBDividir.AutoSize = true;
+            this.RadBDividir.Location = new System.Drawing.Point(34, 136);
+            this.RadBDividir.Name = "RadBDividir";
+            this.RadBDividir.Size = new System.Drawing.Size(76, 24);
+            this.RadBDividir.TabIndex = 1;
+            this.RadBDividir.TabStop = true;
+            this.RadBDividir.Text = "Dividir";
+            this.RadBDividir.UseVisualStyleBackColor = true;
+            this.RadBDividir.CheckedChanged += new System.EventHandler(this.RadBDividir_CheckedChanged);
             // 
-            // lblarg
+            // RadBSomar
             // 
-            this.lblarg.AutoSize = true;
-            this.lblarg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblarg.Location = new System.Drawing.Point(318, 77);
-            this.lblarg.Name = "lblarg";
-            this.lblarg.Size = new System.Drawing.Size(20, 22);
-            this.lblarg.TabIndex = 3;
-            this.lblarg.Text = "?";
+            this.RadBSomar.AutoSize = true;
+            this.RadBSomar.Location = new System.Drawing.Point(34, 46);
+            this.RadBSomar.Name = "RadBSomar";
+            this.RadBSomar.Size = new System.Drawing.Size(81, 24);
+            this.RadBSomar.TabIndex = 0;
+            this.RadBSomar.TabStop = true;
+            this.RadBSomar.Text = "Somar";
+            this.RadBSomar.UseVisualStyleBackColor = true;
+            this.RadBSomar.CheckedChanged += new System.EventHandler(this.RadBSomar_CheckedChanged);
+            // 
+            // txtBox1
+            // 
+            this.txtBox1.Location = new System.Drawing.Point(354, 31);
+            this.txtBox1.Name = "txtBox1";
+            this.txtBox1.Size = new System.Drawing.Size(151, 26);
+            this.txtBox1.TabIndex = 1;
+            // 
+            // txtBox2
+            // 
+            this.txtBox2.Location = new System.Drawing.Point(354, 74);
+            this.txtBox2.Name = "txtBox2";
+            this.txtBox2.Size = new System.Drawing.Size(151, 26);
+            this.txtBox2.TabIndex = 2;
+            // 
+            // lbl_alg
+            // 
+            this.lbl_alg.AutoSize = true;
+            this.lbl_alg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_alg.Location = new System.Drawing.Point(318, 77);
+            this.lbl_alg.Name = "lbl_alg";
+            this.lbl_alg.Size = new System.Drawing.Size(20, 22);
+            this.lbl_alg.TabIndex = 3;
+            this.lbl_alg.Text = "?";
             // 
             // label1
             // 
@@ -135,15 +140,15 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "________________";
             // 
-            // lblres
+            // lbl_res
             // 
-            this.lblres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblres.Location = new System.Drawing.Point(360, 131);
-            this.lblres.Name = "lblres";
-            this.lblres.Size = new System.Drawing.Size(145, 28);
-            this.lblres.TabIndex = 5;
-            this.lblres.Text = "?";
-            this.lblres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_res.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_res.Location = new System.Drawing.Point(360, 131);
+            this.lbl_res.Name = "lbl_res";
+            this.lbl_res.Size = new System.Drawing.Size(145, 28);
+            this.lbl_res.TabIndex = 5;
+            this.lbl_res.Text = "?";
+            this.lbl_res.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCalcular
             // 
@@ -153,6 +158,7 @@
             this.btnCalcular.TabIndex = 6;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnLimpar
             // 
@@ -162,6 +168,7 @@
             this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // button2
             // 
@@ -171,6 +178,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Fechar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // CalcRadio
             // 
@@ -181,14 +189,15 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.lblres);
+            this.Controls.Add(this.lbl_res);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblarg);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lbl_alg);
+            this.Controls.Add(this.txtBox2);
+            this.Controls.Add(this.txtBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "CalcRadio";
             this.Text = "CalcRadio";
+            this.Load += new System.EventHandler(this.CalcRadio_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -203,11 +212,11 @@
         private System.Windows.Forms.RadioButton RadBSubtrair;
         private System.Windows.Forms.RadioButton RadBMultiplicar;
         private System.Windows.Forms.RadioButton RadBDividir;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblarg;
+        private System.Windows.Forms.TextBox txtBox1;
+        private System.Windows.Forms.TextBox txtBox2;
+        private System.Windows.Forms.Label lbl_alg;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblres;
+        private System.Windows.Forms.Label lbl_res;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button button2;
