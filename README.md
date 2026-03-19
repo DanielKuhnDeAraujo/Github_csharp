@@ -4,7 +4,7 @@ Versão Atual : 2.1
 - [Introdução](#Introdução)
 - [Ferramentas](#Ferramentas)
   - [Calculadora com Botões](#Calculadora-com-Botões)
-    - [Layout](#Layout)
+    - [Layout Calculadora Botões](#Layout-Calculadora-Botões)
     - [Funções](#Funções) 
       - [Limpar](#Limpar-(Shift-+-L)) 
       - [Comparar](#Comparar-(Shift-+-C))
@@ -27,7 +27,7 @@ Essa é uma calculadora básica com algumas funções a mais. Para utilizá-la, 
 Esse programa apresenta diversas ferramentas que estarão listadas abaixo :
 ### Calculadora com Botões
 Essa calculadora utiliza de diversos botões para ativar as suas funções.
-#### Layout 
+#### Layout Calculadora Botões
 ![Layout](img/layout.png)
 #### Funções  
 ##### Limpar (Shift + L)  
