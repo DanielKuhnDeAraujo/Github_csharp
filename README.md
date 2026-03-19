@@ -2,6 +2,7 @@
 Versão Atual : 2.1
 ## Índice 
 - [Introdução](#Introdução)
+- [Ferramentas](#Ferramentas)
   - [Calculadora com Botões](#Calculadora-com-Botões)
     - [Layout](#Layout)
     - [Funções](#Funções) 
@@ -22,6 +23,10 @@ Versão Atual : 2.1
   - [1.1](#11)
 ## Introdução   
 Essa é uma calculadora básica com algumas funções a mais. Para utilizá-la, digite os números na textbox e aperte em algum botão para fazer sua respectiva função.
+## Ferramentas 
+Esse programa apresenta diversas ferramentas que estarão listadas abaixo :
+### Calculadora com Botões
+Essa calculadora utiliza de diversos botões para ativar as suas funções.
 #### Layout 
 ![Layout](img/layout.png)
 #### Funções  
