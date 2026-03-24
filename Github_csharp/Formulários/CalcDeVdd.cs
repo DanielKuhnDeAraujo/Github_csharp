@@ -17,9 +17,11 @@ namespace Github_csharp.Formulários
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void f_digitos(object sender, EventArgs e)
         {
-
+            string digito = ((Button)sender).Text;
+            lblvisor.Text = lblvisor.Text == "0" ? digito : lblvisor.Text+digito;
         }
+       
     }
 }

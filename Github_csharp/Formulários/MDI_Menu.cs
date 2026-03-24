@@ -125,5 +125,10 @@ namespace Github_csharp.Formulários
         {
             Process.Start("notepad.exe");
         }
+
+        private void visorÚnicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<CalcDeVdd>();
+        }
     }
 }
