@@ -22,6 +22,10 @@ namespace Github_csharp.Formulários
             string digito = ((Button)sender).Text;
             lblvisor.Text = lblvisor.Text == "0" ? digito : lblvisor.Text+digito;
         }
-       
+
+        private void removerClick(object sender, EventArgs e)
+        {
+            lblvisor.Text = lblvisor.Text.Substring(0, lblvisor.Text.Length - 1);
+        }
     }
 }
