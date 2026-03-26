@@ -88,6 +88,7 @@
             this.btnVirgula.TabIndex = 14;
             this.btnVirgula.Text = ",";
             this.btnVirgula.UseVisualStyleBackColor = true;
+            this.btnVirgula.Click += new System.EventHandler(this.btnVirgula_Click);
             // 
             // btn10
             // 
@@ -130,6 +131,7 @@
             this.btnCE.TabIndex = 10;
             this.btnCE.Text = "CE";
             this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
             // 
             // btnC
             // 
@@ -140,6 +142,7 @@
             this.btnC.TabIndex = 9;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btn9
             // 
@@ -262,6 +265,7 @@
             this.BtnElevado.TabIndex = 19;
             this.BtnElevado.Text = "^";
             this.BtnElevado.UseVisualStyleBackColor = true;
+            this.BtnElevado.Click += new System.EventHandler(this.f_operacoes);
             // 
             // btnDividir
             // 
@@ -272,6 +276,7 @@
             this.btnDividir.TabIndex = 15;
             this.btnDividir.Text = ":";
             this.btnDividir.UseVisualStyleBackColor = true;
+            this.btnDividir.Click += new System.EventHandler(this.f_operacoes);
             // 
             // btnMais
             // 
@@ -282,6 +287,7 @@
             this.btnMais.TabIndex = 18;
             this.btnMais.Text = "+";
             this.btnMais.UseVisualStyleBackColor = true;
+            this.btnMais.Click += new System.EventHandler(this.f_operacoes);
             // 
             // btnVezes
             // 
@@ -292,6 +298,7 @@
             this.btnVezes.TabIndex = 16;
             this.btnVezes.Text = "X";
             this.btnVezes.UseVisualStyleBackColor = true;
+            this.btnVezes.Click += new System.EventHandler(this.f_operacoes);
             // 
             // btmMenos
             // 
@@ -302,6 +309,7 @@
             this.btmMenos.TabIndex = 17;
             this.btmMenos.Text = "-";
             this.btmMenos.UseVisualStyleBackColor = true;
+            this.btmMenos.Click += new System.EventHandler(this.f_operacoes);
             // 
             // lblvisor
             // 
@@ -324,6 +332,7 @@
             this.btnIgual.TabIndex = 12;
             this.btnIgual.Text = "=";
             this.btnIgual.UseVisualStyleBackColor = true;
+            this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
             // CalcDeVdd
             // 
