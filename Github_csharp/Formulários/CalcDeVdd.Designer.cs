@@ -52,6 +52,8 @@
             this.btmMenos = new System.Windows.Forms.Button();
             this.lblvisor = new System.Windows.Forms.Label();
             this.btnIgual = new System.Windows.Forms.Button();
+            this.lblHistorico = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +76,7 @@
             this.panel1.Controls.Add(this.btn3);
             this.panel1.Controls.Add(this.btn2);
             this.panel1.Controls.Add(this.btn1);
-            this.panel1.Location = new System.Drawing.Point(12, 85);
+            this.panel1.Location = new System.Drawing.Point(12, 105);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(239, 359);
             this.panel1.TabIndex = 20;
@@ -251,7 +253,7 @@
             this.panel2.Controls.Add(this.btnMais);
             this.panel2.Controls.Add(this.btnVezes);
             this.panel2.Controls.Add(this.btmMenos);
-            this.panel2.Location = new System.Drawing.Point(257, 85);
+            this.panel2.Location = new System.Drawing.Point(257, 105);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(117, 359);
             this.panel2.TabIndex = 21;
@@ -316,7 +318,7 @@
             this.lblvisor.BackColor = System.Drawing.SystemColors.Control;
             this.lblvisor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblvisor.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvisor.Location = new System.Drawing.Point(12, 9);
+            this.lblvisor.Location = new System.Drawing.Point(12, 29);
             this.lblvisor.Name = "lblvisor";
             this.lblvisor.Size = new System.Drawing.Size(362, 61);
             this.lblvisor.TabIndex = 0;
@@ -326,7 +328,7 @@
             // btnIgual
             // 
             this.btnIgual.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIgual.Location = new System.Drawing.Point(12, 461);
+            this.btnIgual.Location = new System.Drawing.Point(12, 481);
             this.btnIgual.Name = "btnIgual";
             this.btnIgual.Size = new System.Drawing.Size(362, 63);
             this.btnIgual.TabIndex = 12;
@@ -334,22 +336,47 @@
             this.btnIgual.UseVisualStyleBackColor = true;
             this.btnIgual.Click += new System.EventHandler(this.btnIgual_Click);
             // 
+            // lblHistorico
+            // 
+            this.lblHistorico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHistorico.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblHistorico.Location = new System.Drawing.Point(274, 6);
+            this.lblHistorico.Name = "lblHistorico";
+            this.lblHistorico.Size = new System.Drawing.Size(100, 23);
+            this.lblHistorico.TabIndex = 22;
+            this.lblHistorico.Text = "0";
+            this.lblHistorico.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "label1";
+            // 
             // CalcDeVdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(386, 542);
+            this.ClientSize = new System.Drawing.Size(386, 569);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblHistorico);
             this.Controls.Add(this.btnIgual);
             this.Controls.Add(this.lblvisor);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.KeyPreview = true;
             this.Name = "CalcDeVdd";
             this.Text = "CalcDeVdd";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CalcDeVdd_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -378,5 +405,7 @@
         private System.Windows.Forms.Button btnMais;
         private System.Windows.Forms.Button btnVezes;
         private System.Windows.Forms.Button btmMenos;
+        private System.Windows.Forms.Label lblHistorico;
+        private System.Windows.Forms.Label label1;
     }
 }
