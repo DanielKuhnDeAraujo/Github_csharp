@@ -24,7 +24,8 @@ namespace Github_csharp.Formulários
         {
             string digito = ((Button)sender).Text;
             /*if (lblvisor.Text == "0") lblvisor.Text = "";*/
-            if ( lblvisor.Text == "0" || vLimparVisor){
+            if (lblvisor.Text == "0" || vLimparVisor)
+            {
                 lblvisor.Text = "";
                 vLimparVisor = false;
             }
@@ -54,7 +55,7 @@ namespace Github_csharp.Formulários
         private void removerClick(object sender, EventArgs e)
         {
             lblvisor.Text = lblvisor.Text.Substring(0, lblvisor.Text.Length - 1);
-            if (lblvisor.Text.Length <1 || vLimparVisor)
+            if (lblvisor.Text.Length < 1 || vLimparVisor)
             {
                 lblvisor.Text = "0";
                 vLimparVisor = false;
@@ -63,9 +64,9 @@ namespace Github_csharp.Formulários
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            if (vOperacao != "")
+            if (vOperacao != "" && !vLimparVisor)
             {
-                bool zeroexep=false;
+
                 decimal Numatual = decimal.Parse(lblvisor.Text);
                 switch (vOperacao)
                 {
@@ -96,10 +97,10 @@ namespace Github_csharp.Formulários
                         lblvisor.Text = (vNumant * Numatual / 100).ToString();
                         break;
                 }
-                lblHistorico.Text = vNumant + " " + vOperacao + " " + Numatual +" = ";
+                lblHistorico.Text = vNumant + " " + vOperacao + " " + Numatual + " = ";
                 vOperacao = "";
             }
-            
+
         }
 
         private void btnVirgula_Click(object sender, EventArgs e)
@@ -108,7 +109,8 @@ namespace Github_csharp.Formulários
             {
                 lblvisor.Text = "0";
             }
-            if (!lblvisor.Text.Contains(',')) {
+            if (!lblvisor.Text.Contains(','))
+            {
                 lblvisor.Text += ",";
             }
             lblvisor.Focus();
@@ -129,37 +131,39 @@ namespace Github_csharp.Formulários
         private void CalcDeVdd_KeyDown(object sender, KeyEventArgs e)
         {
             label1.Text = e.KeyCode.ToString();
-            Button botao= new Button();
+            Button botao = new Button();
             if (e.KeyCode == Keys.Escape)
             {
                 Close();
             }
-            if ((e.KeyCode>=Keys.NumPad0 && e.KeyCode <= Keys.NumPad9 )||( e.KeyCode>=Keys.D0 && e.KeyCode<=Keys.D9))
+            if ((e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9) || (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9))
             {
-                botao.Text = e.KeyCode.ToString().Substring(e.KeyCode.ToString().Length-1);
-                f_digitos(botao,e);
-                foreach (Control ctr in panel1.Controls) {
-                    if(((Button)ctr).Text == botao.Text)
+                botao.Text = e.KeyCode.ToString().Substring(e.KeyCode.ToString().Length - 1);
+                f_digitos(botao, e);
+                foreach (Control ctr in panel1.Controls)
+                {
+                    if (((Button)ctr).Text == botao.Text)
                     {
                         ctr.BackColor = Color.Gray;
                     }
                 }
             }
-            switch(e.KeyCode)
+            switch (e.KeyCode)
             {
                 case Keys.Back:
                     removerClick(botao, e);
+                    button10.BackColor = Color.Gray;
                     break;
-                case Keys.Decimal: 
+                case Keys.Decimal:
                     btnVirgula_Click(botao, e);
                     break;
                 case Keys.Return:
-                    btnIgual_Click(botao, e);  
+                    btnIgual_Click(botao, e);
                     break;
 
             }
             bool operacoes = true;
-            switch(e.KeyCode)
+            switch (e.KeyCode)
             {
                 case Keys.Add:
                     botao.Text = "+";
@@ -175,14 +179,21 @@ namespace Github_csharp.Formulários
                     botao.Text = ":";
                     break;
                 default:
-                    operacoes= false;
+                    operacoes = false;
                     break;
+            }
+            foreach (Control ctr in panel2.Controls)
+            {
+                if (((Button)ctr).Text == botao.Text)
+                {
+                    ctr.BackColor = Color.Gray;
+                }
             }
             if (operacoes)
             {
-                f_operacoes(botao,e);
+                f_operacoes(botao, e);
             }
-            
+
         }
 
         private void btnAbs_Click(object sender, EventArgs e)
@@ -207,8 +218,15 @@ namespace Github_csharp.Formulários
 
         private void CalcDeVdd_KeyUp(object sender, KeyEventArgs e)
         {
-            foreach (Control control in panel1.Controls) {
+            foreach (Control control in panel1.Controls)
+            {
                 control.BackColor = Color.White;
+            }
+            foreach (Control control in panel2.Controls)
+            {
+                if (control.Text != "=") { 
+                control.BackColor = Color.White;
+                }
             }
         }
 
@@ -238,8 +256,19 @@ namespace Github_csharp.Formulários
                 lblvisor.Text += "0";
             }
             decimal sobre = decimal.Parse(lblvisor.Text);
-            sobre = 1 / sobre;
-            lblvisor.Text = sobre.ToString();
+            try
+            {
+                sobre = 1 / sobre;
+                lblvisor.Text = sobre.ToString();
+            }
+            catch (DivideByZeroException)
+            {
+                {
+                    MessageBox.Show("Impossível divisão por zero");
+                    return;
+                }
+
+            }
         }
     }
 }
