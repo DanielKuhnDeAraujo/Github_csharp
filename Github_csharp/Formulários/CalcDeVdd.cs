@@ -13,6 +13,8 @@ namespace Github_csharp.Formulários
     public partial class CalcDeVdd : Form
     {
         decimal vNumant;
+        string vUltimaOp = "";
+        decimal vUltimoNum;
         string vOperacao = "";
         bool vLimparVisor;
         public CalcDeVdd()
@@ -64,40 +66,55 @@ namespace Github_csharp.Formulários
 
         private void btnIgual_Click(object sender, EventArgs e)
         {
-            if (vOperacao != "" && !vLimparVisor)
+            decimal Numatual;
+            bool fazendoAnt = false;
+            if (vOperacao == "" && vUltimaOp != "") 
+            { 
+                fazendoAnt = true;
+                vOperacao = vUltimaOp;
+            }
+            if (vOperacao != "")
             {
-
-                decimal Numatual = decimal.Parse(lblvisor.Text);
-                switch (vOperacao)
-                {
-                    case "+":
-                        lblvisor.Text = (vNumant + Numatual).ToString();
-                        break;
-                    case "-":
-                        lblvisor.Text = (vNumant - Numatual).ToString();
-                        break;
-                    case ":":
-                        try
-                        {
-                            lblvisor.Text = (vNumant / Numatual).ToString();
-                        }
-                        catch (DivideByZeroException)
-                        {
-                            MessageBox.Show("Impossível divisão por zero");
-                            return;
-                        }
-                        break;
-                    case "X":
-                        lblvisor.Text = (vNumant * Numatual).ToString();
-                        break;
-                    case "^":
-                        lblvisor.Text = (Math.Pow((double)vNumant, (double)Numatual)).ToString();
-                        break;
-                    case "%":
-                        lblvisor.Text = (vNumant * Numatual / 100).ToString();
-                        break;
+                if (!fazendoAnt) { 
+                    Numatual = decimal.Parse(lblvisor.Text);
                 }
+                else
+                {
+                    vNumant = decimal.Parse(lblvisor.Text);
+                    Numatual = vUltimoNum;
+                }
+                    switch (vOperacao)
+                    {
+                        case "+":
+                            lblvisor.Text = (vNumant + Numatual).ToString();
+                            break;
+                        case "-":
+                            lblvisor.Text = (vNumant - Numatual).ToString();
+                            break;
+                        case ":":
+                            try
+                            {
+                                lblvisor.Text = (vNumant / Numatual).ToString();
+                            }
+                            catch (DivideByZeroException)
+                            {
+                                MessageBox.Show("Impossível divisão por zero");
+                                return;
+                            }
+                            break;
+                        case "X":
+                            lblvisor.Text = (vNumant * Numatual).ToString();
+                            break;
+                        case "^":
+                            lblvisor.Text = (Math.Pow((double)vNumant, (double)Numatual)).ToString();
+                            break;
+                        case "%":
+                            lblvisor.Text = (vNumant * Numatual / 100).ToString();
+                            break;
+                    }
                 lblHistorico.Text = vNumant + " " + vOperacao + " " + Numatual + " = ";
+                vUltimoNum = Numatual;
+                vUltimaOp = vOperacao;
                 vOperacao = "";
             }
 
@@ -154,11 +171,14 @@ namespace Github_csharp.Formulários
                     removerClick(botao, e);
                     button10.BackColor = Color.Gray;
                     break;
+                case Keys.Oemcomma:
                 case Keys.Decimal:
                     btnVirgula_Click(botao, e);
+                    btnVirgula.BackColor = Color.Gray;
                     break;
                 case Keys.Return:
                     btnIgual_Click(botao, e);
+                    btnIgual.BackColor = Color.Gray;
                     break;
 
             }
@@ -224,8 +244,9 @@ namespace Github_csharp.Formulários
             }
             foreach (Control control in panel2.Controls)
             {
-                if (control.Text != "=") { 
                 control.BackColor = Color.White;
+                if (control.Text == "=") { 
+                    control.BackColor = Color.LightSeaGreen;
                 }
             }
         }
